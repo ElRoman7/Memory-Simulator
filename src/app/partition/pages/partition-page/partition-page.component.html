@@ -1,0 +1,19 @@
+
+<h1>Listado de Particiones</h1>
+<button mat-button color="accent" [routerLink]="['./new']">Nueva Partición</button>
+<mat-divider></mat-divider>
+
+<div  class="grid bm-8 pt-2">
+  <div *ngFor="let partition of memoryPartitions"
+    class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <partition-card [partition]="partition"></partition-card>
+  </div>
+</div>
+
+<h1>Memoria Virtual</h1>
+<div  class="grid bm-8 pt-2">
+  <div *ngFor="let partition of virtualPartitions"
+    class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <partition-card [partition]="partition"></partition-card>
+  </div>
+</div>

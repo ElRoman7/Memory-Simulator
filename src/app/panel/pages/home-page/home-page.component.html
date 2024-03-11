@@ -1,0 +1,33 @@
+<h1>Panel de Administración</h1>
+<mat-divider></mat-divider>
+
+<div class="parent">
+  <div class="div1">
+    <h3>Memoria Física</h3>
+    <div *ngFor="let partition of fisical" class="mb-2">
+      <partition-card [partition]="partition"></partition-card>
+    </div>
+  </div>
+  <div class="div2">
+    <h3>Memoria Virtual</h3>
+    <div *ngFor="let partition of virtual" class="mb-2">
+      <partition-card [partition]="partition"></partition-card>
+    </div>
+  </div>
+
+  <div class="div3">
+    <h3>Desasignar Proceso</h3>
+    <label for="number">Id: </label>
+    <input id="number" type="number" >
+    <input type="submit">
+  </div>
+  <div class="div4">
+    <h3>Procesos</h3>
+    <div *ngFor="let process of processes" class="mb-2">
+      <process-card [process]="process"></process-card>
+    </div>
+  </div>
+  <div class="div5">
+    <h3>Procesos en Espera</h3>
+  </div>
+</div>

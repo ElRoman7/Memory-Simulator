@@ -1,0 +1,11 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{partition.id}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Tamaño: {{ partition.size }}</p>
+    <p>Allocated: {{partition.allocated}}</p>
+    <mat-divider></mat-divider>
+    <p *ngIf="partition.processId">Process id allocated: {{partition.processId}}</p>
+  </mat-card-content>
+</mat-card>

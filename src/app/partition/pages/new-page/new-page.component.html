@@ -1,0 +1,11 @@
+<form [formGroup]="partitionForm" (ngSubmit)="onSave()">
+  <div>
+    <label for="partitionId">ID de partición:</label>
+    <input formControlName="partitionId" type="number" id="partitionId" required>
+  </div>
+  <div>
+    <label for="partitionSize">Tamaño de partición:</label>
+    <input formControlName="partitionSize" type="number" id="partitionSize" required>
+  </div>
+  <button type="submit" [disabled]="partitionForm.invalid">Crear Partición</button>
+</form>
